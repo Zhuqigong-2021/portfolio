@@ -1,0 +1,234 @@
+.app__navbar {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1rem 10rem;
+  background: rgba(255, 255, 255, 0.25);
+  // box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  position: fixed;
+  z-index: 2;
+  @media screen and (max-width: 900px) {
+    padding: 1rem 2rem;
+  }
+}
+
+// .app__navbar-logo {
+//   display: flex;
+//   justify-content: flex-start;
+//   align-items: center;
+
+//   img {
+//     width: 90px;
+//     height: 20px;
+
+//     @media screen and (min-width: 2000px) {
+//       width: 180px;
+//       height: 40px;
+//     }
+//   }
+// }
+
+.app__navbar-links {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //border: 1px solid black;
+  list-style: none;
+
+  li {
+    margin: 0 1rem;
+    cursor: pointer;
+
+    flex-direction: column;
+
+    div {
+      width: 5px;
+      height: 5px;
+      background: transparent;
+      border-radius: 50%;
+
+      margin-bottom: 5px;
+    }
+
+    a {
+      color: var(--gray-color);
+      text-decoration: none;
+      flex-direction: column;
+
+      text-transform: uppercase;
+      font-weight: 500;
+
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        color: var(--secondary-color);
+      }
+    }
+
+    &:hover {
+      div {
+        background: var(--secondary-color);
+      }
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
+}
+.logo {
+  font-size: 35px;
+
+  display: flex;
+  align-items: flex-end;
+  border-bottom: 1px solid black;
+  font-family: Gilroy;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: rgb(17, 2, 85);
+  span {
+    background: linear-gradient(to bottom, black, lightcyan);
+    -webkit-text-fill-color: transparent;
+    background-size: cover;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    letter-spacing: 4px;
+    //text-shadow: 0px 0px 1px #334155;
+    margin-left: 5px;
+    font-size: 30px;
+    line-height: 20px;
+    margin-bottom: 5px;
+    font-stretch: expanded;
+  }
+  div {
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px black;
+    height: 40px;
+    width: 40px;
+  }
+}
+.btn__language {
+  font-size: 12px;
+  width: 40px;
+  height: 40px;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  border: none;
+  color: var(--light-purple);
+  box-shadow: 0px 0px 1px var(--dark-purple);
+  &:hover {
+    box-shadow: 0px 2px 4px var(--dark-purple);
+    background-color: darken(#4f46e5, 5%);
+  }
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
+}
+.app__navbar-menu {
+  width: 35px;
+  height: 35px;
+  border-radius: 4px;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-color);
+
+  svg {
+    width: 70%;
+    height: 70%;
+    color: var(--white-color);
+  }
+
+  div {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 5;
+
+    padding: 1rem;
+
+    width: 80%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+
+    background: url('../../assets/bgWhite.png');
+    background-color: var(--white-color);
+    background-size: cover;
+    background-repeat: repeat;
+
+    /* top box shadow */
+    box-shadow: 0px 0px 20px rgba(168, 168, 168, 0.15);
+
+    svg {
+      width: 35px;
+      height: 35px;
+      color: var(--secondary-color);
+      margin: 0.5rem 1rem;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+
+      li {
+        margin: 1rem;
+
+        a {
+          color: var(--gray-color);
+          text-decoration: none;
+          font-size: 1rem;
+          text-transform: uppercase;
+          font-weight: 500;
+
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            color: var(--secondary-color);
+          }
+        }
+      }
+      button {
+        color: var(--light-purple);
+        background-color: var(--secondary-color);
+        padding: 0rem 1rem;
+        border-radius: 4px;
+        border: none;
+        margin-left: 1rem;
+        margin-top: 2rem;
+      }
+    }
+
+    @media screen and (min-width: 900px) {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 900px) {
+    display: none;
+  }
+}
