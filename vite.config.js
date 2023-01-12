@@ -12,9 +12,17 @@
 // });
 
 import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import svgr from '@svgr/rollup';
+// import react from '@vitejs/plugin-react';
+// import svgr from '@svgr/rollup';
 
+// export default defineConfig({
+//   plugins: [svgr(), react()],
+// });
+import reactRefresh from '@vitejs/plugin-react-refresh';
 export default defineConfig({
-  plugins: [svgr(), react()],
+  plugins: [reactRefresh()],
+  mode: 'development',
+  build: {
+    minify: false,
+  },
 });
